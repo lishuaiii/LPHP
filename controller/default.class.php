@@ -31,7 +31,7 @@ class defaultController extends appController
 		else
 		{
 			$data['code'] = 0 ;
-			$data['data'] = array( '2' , '4' , '6' , '8' ); 
+			$data['data'] = array('2', '4', '6', '8'); 
 		}
 		
 		render($data, 'rest');
@@ -40,22 +40,22 @@ class defaultController extends appController
 	function mobile()
 	{
 		$data['title'] = $data['top_title'] = 'JQMobi';
-		render( $data , 'mobile' );
+		render($data, 'mobile');
 	}
 	
 	function ajax_load()
 	{
-		return ajax_echo('Hello ' . date("Y-m-d H:i:s"));
+		return ajax_echo('Hello ' . date('Y-m-d H:i:s'));
 	}
 	
 	function about()
 	{
-		return info_page( "ftqq.com 荣誉出品" , "About" );
+		return info_page('hahaha', 'About');
 	}
 	
 	function contact()
 	{
-		return info_page("Sina Weibo - <a href='http://weibo.com/easy' target='_blank'>@Easy</a> |  Twitter - @Easychen", "Follow Me");
+		return info_page('hahaha', 'Follow me');
 	}
 	
 	function test()
@@ -69,6 +69,6 @@ class defaultController extends appController
 	function sql()
 	{
 		db();
-		echo $sql = prepare("SELECT * FROM `user` WHERE `name` = ?s AND `uid` = ?i AND `level` = ?s LIMIT 1", array('Easy\'', '-1', '9.56'));	
+		echo $sql = prepare("SELECT * FROM `user` WHERE `name` = ?s AND `uid` = ?i AND `level` = ?s LIMIT 1", array('tq0fqeu', '1', '2'));	
 	}
 }
